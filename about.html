@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NGO Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --teal: #008080;
+        }
+        .bg-gold { background-color: #D4AF37; }
+        .text-gold { color: #D4AF37; }
+        .bg-teal { background-color: #008080; }
+        .text-teal { color: #008080; }
+        .border-gold { border-color: #D4AF37; }
+        .border-teal { border-color: #008080; }
+        .hover-gold:hover { background-color: #D4AF37; }
+        .hover-teal:hover { background-color: #008080; }
+    </style>
+</head>
+<body class="bg-white">
+<!-- ================= NAVIGATION ================= -->
+<nav id="navbar" class="fixed w-full top-0 z-50 bg-transparent transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+
+            <!-- Logo -->
+            <div class="w-1/4">
+                <a href="index.html">
+                    <img src="images/logo.webp" alt="NGO Logo" class="h-24">
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex flex-1 justify-center space-x-10">
+                <a href="index.html" class="nav-link text-white hover:text-gold transition">Home</a>
+                <a href="about.html" class="nav-link text-white font-semibold border-b-2 border-gold pb-1">About Us</a>
+                <a href="programs.html" class="nav-link text-white hover:text-gold transition">Our Programs</a>
+                <a href="gallery.html" class="nav-link text-white hover:text-gold transition">Gallery</a>
+                <a href="contact.html" class="nav-link text-white hover:text-gold transition">Contact Us</a>
+            </div>
+
+            <!-- Donate Button -->
+            <div class="hidden md:flex w-1/4 justify-end">
+                <a href="donate.html" class="bg-gold text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition">
+                    <i class="fas fa-heart mr-2"></i> Donate Now
+                </a>
+            </div>
+
+            <!-- Mobile Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-white shadow-lg md:hidden">
+        <a href="index.html" class="block px-6 py-3 font-semibold text-teal">Home</a>
+        <a href="about.html" class="block px-6 py-3 text-gray-700">About Us</a>
+        <a href="programs.html" class="block px-6 py-3 text-gray-700">Our Programs</a>
+        <a href="gallery.html" class="block px-6 py-3 text-gray-700">Gallery</a>
+        <a href="contact.html" class="block px-6 py-3 text-gray-700">Contact Us</a>
+        <a href="donate.html" class="block mx-6 mb-4 text-center bg-gold text-white py-2 rounded-lg font-semibold">
+            Donate
+        </a>
+    </div>
+</nav>
+
+
+    <!-- Page Header -->
+    <section class="h-[400px] pt-32 pb-16 bg-gradient-to-r from-teal-600 to-teal-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="uppercase tracking-widest text-gold font-semibold mb-4">
+                ABOUT US
+            </p>
+    
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Our Story of Hope
+            </h1>
+    
+            <p class="text-lg md:text-xl mb-8">
+                For nearly three decades, we have been dedicated to transforming lives and building resilient communities around the world.           
+             </p>        
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <div class="bg-gray-200 p-8 rounded-lg text-gray-700">
+                    <div class="text-5xl text-gold mb-4">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-4">Our Mission</h2>
+                    <p class="text-lg mb-4">
+                        To mobilise resources and partnerships to contribute to the creation of just and equitable societies globally. We work tirelessly to advance peace, human rights, and democracy through advocacy, dialogue, and direct action.
+                    </p>
+                    <p class="text-lg">
+                        Our work is rooted in memory, dialogue, research and advocacy - always aligned to our commitment to freedom and dignity for all.
+                    </p>
+                </div>
+                <div class="bg-gray-200 p-8 rounded-lg text-gray-700">
+                    <div class="text-5xl text-teal mb-4">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-4">Our Vision</h2>
+                    <p class="text-lg mb-4">
+                        A world where every individual has access to justice, equality, and opportunity. We envision communities where human rights are respected, democracy thrives, and peace prevails.
+                    </p>
+                    <p class="text-lg">
+                        Through our programs and partnerships, we strive to build inclusive platforms for justice and inspire positive change across the globe.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Our Story -->
+            <div class="mb-16">
+                <h2 class="text-4xl font-bold text-teal mb-8 text-center">Our Story</h2>
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-gray-700 text-lg mb-6">
+                        Founded with a vision to create lasting change, our NGO Foundation has been at the forefront of social justice and human rights advocacy for over two decades. What started as a small initiative has grown into a global movement, touching the lives of millions.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-6">
+                        We are the custodians of important legacies and active facilitators of change. Our work spans from preserving extensive archives to convening dialogue on today's most pressing issues. We use our platform as a living resource to inspire change, advance equity, and build inclusive platforms for justice.
+                    </p>
+                    <p class="text-gray-700 text-lg">
+                        From preserving historical records to convening critical dialogues, we leverage our resources to address systemic challenges and create opportunities for marginalized communities worldwide.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Values -->
+            <div>
+                <h2 class="text-4xl font-bold text-teal mb-12 text-center">Our Values</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 border-2 border-teal rounded-lg">
+                        <div class="text-5xl text-gold mb-4">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-teal mb-3">Justice</h3>
+                        <p class="text-gray-700">
+                            We believe in fair treatment and equal opportunities for all, regardless of background or circumstance.
+                        </p>
+                    </div>
+                    <div class="text-center p-6 border-2 border-teal rounded-lg">
+                        <div class="text-5xl text-gold mb-4">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-teal mb-3">Integrity</h3>
+                        <p class="text-gray-700">
+                            We operate with honesty, transparency, and accountability in all our actions and decisions.
+                        </p>
+                    </div>
+                    <div class="text-center p-6 border-2 border-teal rounded-lg">
+                        <div class="text-5xl text-gold mb-4">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-teal mb-3">Compassion</h3>
+                        <p class="text-gray-700">
+                            We approach our work with empathy and a deep commitment to improving lives and communities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-teal mb-12 text-center">Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="w-32 h-32 bg-teal rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-5xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-teal mb-2">Jane Smith</h3>
+                    <p class="text-gold font-semibold mb-3">Executive Director</p>
+                    <p class="text-gray-600">Leading our organization with over 15 years of experience in non-profit management and social justice advocacy.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="w-32 h-32 bg-teal rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-5xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-teal mb-2">John Doe</h3>
+                    <p class="text-gold font-semibold mb-3">Program Director</p>
+                    <p class="text-gray-600">Overseeing our programs with expertise in community development and international relations.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="w-32 h-32 bg-teal rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-5xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-teal mb-2">Sarah Johnson</h3>
+                    <p class="text-gold font-semibold mb-3">Advocacy Coordinator</p>
+                    <p class="text-gray-600">Driving our advocacy efforts and building partnerships with stakeholders worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-14">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+            <!-- Brand / Logo -->
+            <div>
+                <img src="images/logo.webp" alt="NGO Foundation Logo" class="h-24 ">
+
+                <p class="text-white mb-5 max-w-xs">
+                    Mobilising change for a better world through advocacy, dialogue, and action.
+                </p>
+
+                <!-- Social Icons -->
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="about.html" class="text-white hover:text-gold transition">About Us</a></li>
+                    <li><a href="gallery.html" class="text-white hover:text-gold transition">Gallery</a></li>
+                    <li><a href="donate.html" class="text-white hover:text-gold transition">Donate</a></li>
+                    <li><a href="contact.html" class="text-white hover:text-gold transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Programs -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Our Programs</h4>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-white hover:text-gold transition">Community Development</a></li>
+                    <li><a href="#" class="text-white hover:text-gold transition">Youth Empowerment</a></li>
+                    <li><a href="#" class="text-white hover:text-gold transition">Human Rights Advocacy</a></li>
+                    <li><a href="#" class="text-white hover:text-gold transition">Peace Building</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                <ul class="space-y-3 text-white">
+                    <li class="flex items-start">
+                        <i class="fas fa-phone mt-1 mr-3"></i>
+                        +1 (555) 123-4567
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-envelope mt-1 mr-3"></i>
+                        info@ngofoundation.org
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                        123 Foundation St, City, Country
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-800 mt-12 pt-6 text-center text-white">
+            <p>&copy; 2025 NGO Foundation. All rights reserved.</p>
+        </div>
+
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - NGO Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --teal: #008080;
+        }
+        .bg-gold { background-color: #D4AF37; }
+        .text-gold { color: #D4AF37; }
+        .bg-teal { background-color: #008080; }
+        .text-teal { color: #008080; }
+        .border-gold { border-color: #D4AF37; }
+        .border-teal { border-color: #008080; }
+        .hover-gold:hover { background-color: #D4AF37; }
+        .hover-teal:hover { background-color: #008080; }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white">
+<!-- ================= NAVIGATION ================= -->
+<nav id="navbar" class="fixed w-full top-0 z-50 bg-transparent transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+
+            <!-- Logo -->
+            <div class="w-1/4">
+                <a href="index.html">
+                    <img src="images/logo.webp" alt="NGO Logo" class="h-24">
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex flex-1 justify-center space-x-10">
+                <a href="index.html" class="nav-link text-white hover:text-gold transition">Home</a>
+                <a href="about.html" class="nav-link text-white hover:text-gold transition">About Us</a>
+                <a href="programs.html" class="nav-link text-white hover:text-gold transition">Our Programs</a>
+                <a href="gallery.html" class="nav-link text-white font-semibold border-b-2 border-gold pb-1">Gallery</a>
+                <a href="contact.html" class="nav-link text-white hover:text-gold transition">Contact Us</a>
+            </div>
+
+            <!-- Donate Button -->
+            <div class="hidden md:flex w-1/4 justify-end">
+                <a href="donate.html" class="bg-gold text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition">
+                    <i class="fas fa-heart mr-2"></i> Donate Now
+                </a>
+            </div>
+
+            <!-- Mobile Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-white shadow-lg md:hidden">
+        <a href="index.html" class="block px-6 py-3 font-semibold text-teal">Home</a>
+        <a href="about.html" class="block px-6 py-3 text-gray-700">About Us</a>
+        <a href="programs.html" class="block px-6 py-3 text-gray-700">Our Programs</a>
+        <a href="gallery.html" class="block px-6 py-3 text-gray-700">Gallery</a>
+        <a href="contact.html" class="block px-6 py-3 text-gray-700">Contact Us</a>
+        <a href="donate.html" class="block mx-6 mb-4 text-center bg-gold text-white py-2 rounded-lg font-semibold">
+            Donate
+        </a>
+    </div>
+</nav>
+
+    <!-- Page Header -->
+    <section class="h-[400px] pt-32 pb-16 bg-gradient-to-r from-teal-600 to-teal-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="uppercase tracking-widest text-gold font-semibold mb-4">
+                GALLERY
+            </p>
+    
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Our Impact in Pictures
+            </h1>
+    
+            <p class="text-lg md:text-xl mb-8">
+                Explore moments of hope, transformation, and community from our programs around the world.
+            </p>
+    
+        </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="py-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="filter-btn active bg-teal text-white px-6 py-2 rounded-lg font-semibold" data-filter="all">
+                    All
+                </button>
+                <button class="filter-btn bg-white text-teal border-2 border-teal px-6 py-2 rounded-lg font-semibold hover:bg-teal hover:text-white transition" data-filter="programs">
+                    Programs
+                </button>
+                <button class="filter-btn bg-white text-teal border-2 border-teal px-6 py-2 rounded-lg font-semibold hover:bg-teal hover:text-white transition" data-filter="events">
+                    Events
+                </button>
+                <button class="filter-btn bg-white text-teal border-2 border-teal px-6 py-2 rounded-lg font-semibold hover:bg-teal hover:text-white transition" data-filter="community">
+                    Community
+                </button>
+                <button class="filter-btn bg-white text-teal border-2 border-teal px-6 py-2 rounded-lg font-semibold hover:bg-teal hover:text-white transition" data-filter="education">
+                    Education
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-category="programs">
+                    <div class="bg-teal h-64 flex items-center justify-center">
+                        <i class="fas fa-child text-8xl text-white opacity-50"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="font-bold text-lg mb-2">Early Childhood Program</h3>
+                        <p>Children participating in our early learning activities</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-category="events">
+                    <div class="bg-gold h-64 flex items-center justify-center">
+                        <i class="fas fa-users text-8xl text-white opacity-50"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="font-bold text-lg mb-2">Community Dialogue</h3>
+                        <p>Annual community dialogue session bringing together diverse voices</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-category="education">
+                    <div class="bg-teal h-64 flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-8xl text-white opacity-50"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="font-bold text-lg mb-2">Education Workshop</h3>
+                        <p>Teachers receiving training in our education program</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-category="community">
+                    <div class="bg-gold h-64 flex items-center justify-center">
+                        <i class="fas fa-hands-helping text-8xl text-white opacity-50"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="font-bold text-lg mb-2">Community Outreach</h3>
+                        <p>Volunteers working with local communities</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-category="programs">
+                    <div class="bg-teal h-64 flex items-center justify-center">
+                        <i class="fas fa-book text-8xl text-white opacity-50"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="font-bold text-lg mb-2">Reading Program</h3>
+                        <p>Children enjoying books in our reading initiative</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-category="events">
+                    <div class="bg-gold h-64 flex items-center justify-center">
+                        <i class="fas fa-microphone text-8xl text-white opacity-50"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="font-bold text-lg mb-2">Annual Lecture</h3>
+                        <p>Prominent speaker at our annual lecture series</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-category="community">
+                    <div class="bg-teal h-64 flex items-center justify-center">
+                        <i class="fas fa-seedling text-8xl text-white opacity-50"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="font-bold text-lg mb-2">Community Garden</h3>
+                        <p>Local community garden project we support</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-category="education">
+                    <div class="bg-gold h-64 flex items-center justify-center">
+                        <i class="fas fa-laptop text-8xl text-white opacity-50"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="font-bold text-lg mb-2">Digital Learning</h3>
+                        <p>Students using technology in our digital education program</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-category="programs">
+                    <div class="bg-teal h-64 flex items-center justify-center">
+                        <i class="fas fa-heart text-8xl text-white opacity-50"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="font-bold text-lg mb-2">Health Initiative</h3>
+                        <p>Health screening program in rural communities</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 10 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-category="events">
+                    <div class="bg-gold h-64 flex items-center justify-center">
+                        <i class="fas fa-calendar-alt text-8xl text-white opacity-50"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="font-bold text-lg mb-2">Awareness Day</h3>
+                        <p>Community awareness event on human rights</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 11 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-category="community">
+                    <div class="bg-teal h-64 flex items-center justify-center">
+                        <i class="fas fa-home text-8xl text-white opacity-50"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="font-bold text-lg mb-2">Housing Project</h3>
+                        <p>Community housing initiative we support</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 12 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-category="education">
+                    <div class="bg-gold h-64 flex items-center justify-center">
+                        <i class="fas fa-chalkboard-teacher text-8xl text-white opacity-50"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="font-bold text-lg mb-2">Teacher Training</h3>
+                        <p>Professional development workshop for educators</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-teal-600 to-white text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Be Part of Our Story</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Join us in creating more moments of impact and positive change in communities around the world.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="donate.html" class="bg-teal text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition transform hover:scale-105">
+                    <i class="fas fa-donate mr-2"></i>Support Our Work
+                </a>
+                <a href="contact.html" class="bg-white text-teal px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition transform hover:scale-105">
+                    <i class="fas fa-envelope mr-2"></i>Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-14">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+            <!-- Brand / Logo -->
+            <div>
+                <img src="images/logo.webp" alt="NGO Foundation Logo" class="h-24 ">
+
+                <p class="text-white mb-5 max-w-xs">
+                    Mobilising change for a better world through advocacy, dialogue, and action.
+                </p>
+
+                <!-- Social Icons -->
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="about.html" class="text-white hover:text-gold transition">About Us</a></li>
+                    <li><a href="gallery.html" class="text-white hover:text-gold transition">Gallery</a></li>
+                    <li><a href="donate.html" class="text-white hover:text-gold transition">Donate</a></li>
+                    <li><a href="contact.html" class="text-white hover:text-gold transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Programs -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Our Programs</h4>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-white hover:text-gold transition">Community Development</a></li>
+                    <li><a href="#" class="text-white hover:text-gold transition">Youth Empowerment</a></li>
+                    <li><a href="#" class="text-white hover:text-gold transition">Human Rights Advocacy</a></li>
+                    <li><a href="#" class="text-white hover:text-gold transition">Peace Building</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                <ul class="space-y-3 text-white">
+                    <li class="flex items-start">
+                        <i class="fas fa-phone mt-1 mr-3"></i>
+                        +1 (555) 123-4567
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-envelope mt-1 mr-3"></i>
+                        info@ngofoundation.org
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                        123 Foundation St, City, Country
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-800 mt-12 pt-6 text-center text-white">
+            <p>&copy; 2025 NGO Foundation. All rights reserved.</p>
+        </div>
+
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

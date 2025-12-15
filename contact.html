@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - NGO Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --teal: #008080;
+        }
+        .bg-gold { background-color: #D4AF37; }
+        .text-gold { color: #D4AF37; }
+        .bg-teal { background-color: #008080; }
+        .text-teal { color: #008080; }
+        .border-gold { border-color: #D4AF37; }
+        .border-teal { border-color: #008080; }
+        .hover-gold:hover { background-color: #D4AF37; }
+        .hover-teal:hover { background-color: #008080; }
+    </style>
+</head>
+<body class="bg-white">
+<!-- ================= NAVIGATION ================= -->
+<nav id="navbar" class="fixed w-full top-0 z-50 bg-transparent transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+
+            <!-- Logo -->
+            <div class="w-1/4">
+                <a href="index.html">
+                    <img src="images/logo.webp" alt="NGO Logo" class="h-24">
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex flex-1 justify-center space-x-10">
+                <a href="index.html" class="nav-link text-white hover:text-gold transition">Home</a>
+                <a href="about.html" class="nav-link text-white hover:text-gold transition">About Us</a>
+                <a href="programs.html" class="nav-link text-white hover:text-gold transition">Our Programs</a>
+                <a href="gallery.html" class="nav-link text-white hover:text-gold transition">Gallery</a>
+                <a href="contact.html" class="nav-link text-white font-semibold border-b-2 border-gold pb-1">Contact Us</a>
+            </div>
+
+            <!-- Donate Button -->
+            <div class="hidden md:flex w-1/4 justify-end">
+                <a href="donate.html" class="bg-gold text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition">
+                    <i class="fas fa-heart mr-2"></i> Donate Now
+                </a>
+            </div>
+
+            <!-- Mobile Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-white shadow-lg md:hidden">
+        <a href="index.html" class="block px-6 py-3 font-semibold text-teal">Home</a>
+        <a href="about.html" class="block px-6 py-3 text-gray-700">About Us</a>
+        <a href="programs.html" class="block px-6 py-3 text-gray-700">Our Programs</a>
+        <a href="gallery.html" class="block px-6 py-3 text-gray-700">Gallery</a>
+        <a href="contact.html" class="block px-6 py-3 text-gray-700">Contact Us</a>
+        <a href="donate.html" class="block mx-6 mb-4 text-center bg-gold text-white py-2 rounded-lg font-semibold">
+            Donate
+        </a>
+    </div>
+</nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-r from-teal-600 to-teal-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="uppercase tracking-widest text-gold font-semibold mb-4">
+                CONTACT US
+            </p>
+    
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Get In Touch
+            </h1>
+    
+            <p class="text-lg md:text-xl mb-8">
+                Have questions? Want to volunteer or partner with us? We'd love to hear from you.
+             </p>        
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h2 class="text-3xl font-bold text-teal mb-6">Send Us a Message</h2>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-teal focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Email Address *</label>
+                            <input type="email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-teal focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-teal focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Subject *</label>
+                            <select required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-teal focus:outline-none">
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="programs">Programs Information</option>
+                                <option value="donation">Donation Inquiry</option>
+                                <option value="volunteer">Volunteer Opportunities</option>
+                                <option value="partnership">Partnership Opportunities</option>
+                                <option value="media">Media Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Message *</label>
+                            <textarea required rows="6" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-teal focus:outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-teal text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-teal-700 transition transform hover:scale-105">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <div class="bg-teal rounded-lg shadow-lg p-8 text-white mb-6">
+                        <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-gold rounded-full p-3 mr-4">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Address</h3>
+                                    <p>123 Foundation Street<br>City, State 12345<br>Country</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-gold rounded-full p-3 mr-4">
+                                    <i class="fas fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Phone</h3>
+                                    <p>+1 (555) 123-4567</p>
+                                    <p class="text-sm mt-1">Mon-Fri: 9:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-gold rounded-full p-3 mr-4">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Email</h3>
+                                    <p>info@ngofoundation.org</p>
+                                    <p class="text-sm mt-1">We respond within 24 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-teal">
+                        <h3 class="text-2xl font-bold text-teal mb-4">Office Hours</h3>
+                        <div class="space-y-3 text-gray-700">
+                            <div class="flex justify-between">
+                                <span class="font-semibold">Monday - Friday</span>
+                                <span>9:00 AM - 5:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-semibold">Saturday</span>
+                                <span>10:00 AM - 2:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-semibold">Sunday</span>
+                                <span>Closed</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gold rounded-lg shadow-lg p-8 text-white mt-6">
+                        <h3 class="text-2xl font-bold mb-4">Follow Us</h3>
+                        <p class="mb-4">Stay connected with us on social media for updates, news, and stories of impact.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-white text-teal w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 transition">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-white text-teal w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 transition">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-white text-teal w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 transition">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-white text-teal w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-teal mb-8 text-center">Find Us</h2>
+            <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+                <div class="text-center">
+                    <i class="fas fa-map-marked-alt text-6xl text-teal mb-4"></i>
+                    <p class="text-gray-600 text-lg">Interactive map would be embedded here</p>
+                    <p class="text-gray-500 mt-2">123 Foundation Street, City, State 12345</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-14">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+            <!-- Brand / Logo -->
+            <div>
+                <img src="images/logo.webp" alt="NGO Foundation Logo" class="h-24 ">
+
+                <p class="text-white mb-5 max-w-xs">
+                    Mobilising change for a better world through advocacy, dialogue, and action.
+                </p>
+
+                <!-- Social Icons -->
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="about.html" class="text-white hover:text-gold transition">About Us</a></li>
+                    <li><a href="gallery.html" class="text-white hover:text-gold transition">Gallery</a></li>
+                    <li><a href="donate.html" class="text-white hover:text-gold transition">Donate</a></li>
+                    <li><a href="contact.html" class="text-white hover:text-gold transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Programs -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Our Programs</h4>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-white hover:text-gold transition">Community Development</a></li>
+                    <li><a href="#" class="text-white hover:text-gold transition">Youth Empowerment</a></li>
+                    <li><a href="#" class="text-white hover:text-gold transition">Human Rights Advocacy</a></li>
+                    <li><a href="#" class="text-white hover:text-gold transition">Peace Building</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                <ul class="space-y-3 text-white">
+                    <li class="flex items-start">
+                        <i class="fas fa-phone mt-1 mr-3"></i>
+                        +1 (555) 123-4567
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-envelope mt-1 mr-3"></i>
+                        info@ngofoundation.org
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                        123 Foundation St, City, Country
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-800 mt-12 pt-6 text-center text-white">
+            <p>&copy; 2025 NGO Foundation. All rights reserved.</p>
+        </div>
+
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programs - NGO Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --teal: #008080;
+        }
+        .bg-gold { background-color: #D4AF37; }
+        .text-gold { color: #D4AF37; }
+        .bg-teal { background-color: #008080; }
+        .text-teal { color: #008080; }
+        .border-gold { border-color: #D4AF37; }
+        .border-teal { border-color: #008080; }
+        .hover-gold:hover { background-color: #D4AF37; }
+        .hover-teal:hover { background-color: #008080; }
+    </style>
+</head>
+<body class="bg-white">
+<!-- ================= NAVIGATION ================= -->
+<nav id="navbar" class="fixed w-full top-0 z-50 bg-transparent transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+
+            <!-- Logo -->
+            <div class="w-1/4">
+                <a href="index.html">
+                    <img src="images/logo.webp" alt="NGO Logo" class="h-24">
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex flex-1 justify-center space-x-10">
+                <a href="index.html" class="nav-link text-white hover:text-gold transition">Home</a>
+                <a href="about.html" class="nav-link text-white hover:text-gold transition">About Us</a>
+                <a href="programs.html" class="nav-link text-white font-semibold border-b-2 border-gold pb-1">Our Programs</a>
+                <a href="gallery.html" class="nav-link text-white hover:text-gold transition">Gallery</a>
+                <a href="contact.html" class="nav-link text-white hover:text-gold transition">Contact Us</a>
+            </div>
+
+            <!-- Donate Button -->
+            <div class="hidden md:flex w-1/4 justify-end">
+                <a href="donate.html" class="bg-gold text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition">
+                    <i class="fas fa-heart mr-2"></i> Donate Now
+                </a>
+            </div>
+
+
+            <!-- Mobile Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-white shadow-lg md:hidden">
+        <a href="index.html" class="block px-6 py-3 font-semibold text-teal">Home</a>
+        <a href="about.html" class="block px-6 py-3 text-gray-700">About Us</a>
+        <a href="programs.html" class="block px-6 py-3 text-gray-700">Our Programs</a>
+        <a href="gallery.html" class="block px-6 py-3 text-gray-700">Gallery</a>
+        <a href="contact.html" class="block px-6 py-3 text-gray-700">Contact Us</a>
+        <a href="donate.html" class="block mx-6 mb-4 text-center bg-gold text-white py-2 rounded-lg font-semibold">
+            Donate
+        </a>
+    </div>
+</nav>
+
+
+    <!-- Page Header -->
+    <section class="h-[400px] flex items-center justify-center pt-32 pb-16 bg-gradient-to-r from-teal-600 to-teal-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="uppercase tracking-widest text-gold font-semibold mb-4">
+                OUR PROGRAMS
+            </p>
+    
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Creating Lasting Impact
+            </h1>
+    
+            <p class="text-lg md:text-xl mb-8">
+                Through our comprehensive programs, we address the root causes of poverty and create sustainable pathways to prosperity for communities worldwide.           
+             </p>        
+        </div>
+    </section>
+
+<!-- Programs Section -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Program 1 -->
+        <div class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h4 class="text-xl font-semibold text-gold mb-2">Bringing Wellness To Communities</h4>
+                    <h2 class="text-4xl font-bold text-teal mb-4">Critical Dialogue Series</h2>
+                    <p class="text-gray-700 text-lg mb-4">
+                        The core work of our Dialogue & Advocacy function is to ensure active engagement with the public on critical social issues. Through structured conversations, we bring together diverse voices to address pressing challenges.
+                    </p>
+                    <ul class="list-none space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-teal mr-3"></i>Monthly public forums on current issues</li>
+                        <li class="flex items-center"><i class="fas fa-check text-teal mr-3"></i>Expert panels and community leaders</li>
+                        <li class="flex items-center"><i class="fas fa-check text-teal mr-3"></i>Youth engagement programs</li>
+                        <li class="flex items-center"><i class="fas fa-check text-teal mr-3"></i>Policy advocacy workshops</li>
+                    </ul>
+                    <a href="contact.html" class="inline-block bg-teal text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition">
+                        Get Involved <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div>
+                    <img src="images/program2.jpg" alt="Critical Dialogue Series" class="rounded-lg shadow-lg w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+
+        <!-- Program 2 -->
+        <div class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <img src="images/program1.jpg" alt="Early Childhood Development" class="rounded-lg shadow-lg w-full h-full object-cover">
+                </div>
+                <div class="order-1 md:order-2">
+                    <h4 class="text-xl font-semibold text-gold mb-2">Building Futures Through Learning</h4>
+                    <h2 class="text-4xl font-bold text-teal mb-4">Early Childhood Development</h2>
+                    <p class="text-gray-700 text-lg mb-4">
+                        Early Childhood Development is a focus area for our Foundation. Investing in the early years of a child's life is crucial for their future success and the well-being of society.
+                    </p>
+                    <ul class="list-none space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-teal mr-3"></i>Early learning center development</li>
+                        <li class="flex items-center"><i class="fas fa-check text-teal mr-3"></i>Teacher training and certification</li>
+                        <li class="flex items-center"><i class="fas fa-check text-teal mr-3"></i>Nutrition and health programs</li>
+                        <li class="flex items-center"><i class="fas fa-check text-teal mr-3"></i>Parent education workshops</li>
+                    </ul>
+                    <a href="contact.html" class="inline-block bg-teal text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition">
+                        Get Involved <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h4 class="text-xl font-semibold text-gold mb-2">Strengthening Local Foundations</h4>
+                    <h2 class="text-4xl font-bold text-teal mb-4">Education & Advocacy</h2>
+                    <p class="text-gray-700 text-lg mb-4">
+                        Our Annual Lecture Series invites prominent thought leaders to drive debate on significant social issues, encouraging people to enter into dialogue and take action.
+                    </p>
+                    <ul class="list-none space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-teal mr-3"></i>Annual lecture series with global leaders</li>
+                        <li class="flex items-center"><i class="fas fa-check text-teal mr-3"></i>Educational workshops and seminars</li>
+                        <li class="flex items-center"><i class="fas fa-check text-teal mr-3"></i>Research and publication programs</li>
+                        <li class="flex items-center"><i class="fas fa-check text-teal mr-3"></i>Advocacy campaigns and awareness raising</li>
+                    </ul>
+                    <a href="contact.html" class="inline-block bg-teal text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition">
+                        Get Involved <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div>
+                    <img src="images/program3.jpg" alt="Education & Advocacy" class="rounded-lg shadow-lg w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Programs -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white border-2 border-teal rounded-lg p-6 hover:shadow-xl transition">
+                <div class="text-4xl text-gold mb-4">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-teal mb-3">Education Hub</h3>
+                <p class="text-gray-700 mb-4">
+                    Providing educational resources, archives, and learning materials to support research and education about social justice and human rights.
+                </p>
+            </div>
+            <div class="bg-white border-2 border-teal rounded-lg p-6 hover:shadow-xl transition">
+                <div class="text-4xl text-gold mb-4">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-teal mb-3">Land Rights Initiative</h3>
+                <p class="text-gray-700 mb-4">
+                    Advocating for equitable access to land and resources, working with communities to secure land rights and promote sustainable development.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-teal-600 to-white text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Support Our Programs</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Your support helps us continue these vital programs and expand our reach to more communities in need.
+            </p>
+            <a href="donate.html" class="inline-block bg-teal text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition transform hover:scale-105">
+                <i class="fas fa-donate mr-2"></i>Make a Donation
+            </a>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-14">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+            <!-- Brand / Logo -->
+            <div>
+                <img src="images/logo.webp" alt="NGO Foundation Logo" class="h-24 ">
+
+                <p class="text-white mb-5 max-w-xs">
+                    Mobilising change for a better world through advocacy, dialogue, and action.
+                </p>
+
+                <!-- Social Icons -->
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gold text-xl transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="about.html" class="text-white hover:text-gold transition">About Us</a></li>
+                    <li><a href="gallery.html" class="text-white hover:text-gold transition">Gallery</a></li>
+                    <li><a href="donate.html" class="text-white hover:text-gold transition">Donate</a></li>
+                    <li><a href="contact.html" class="text-white hover:text-gold transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Programs -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Our Programs</h4>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-white hover:text-gold transition">Community Development</a></li>
+                    <li><a href="#" class="text-white hover:text-gold transition">Youth Empowerment</a></li>
+                    <li><a href="#" class="text-white hover:text-gold transition">Human Rights Advocacy</a></li>
+                    <li><a href="#" class="text-white hover:text-gold transition">Peace Building</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                <ul class="space-y-3 text-white">
+                    <li class="flex items-start">
+                        <i class="fas fa-phone mt-1 mr-3"></i>
+                        +1 (555) 123-4567
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-envelope mt-1 mr-3"></i>
+                        info@ngofoundation.org
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                        123 Foundation St, City, Country
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-800 mt-12 pt-6 text-center text-white">
+            <p>&copy; 2025 NGO Foundation. All rights reserved.</p>
+        </div>
+
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
