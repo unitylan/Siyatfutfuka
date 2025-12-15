@@ -1,38 +1,50 @@
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-        });
+const nav = document.getElementById('navbar');
+  const links = document.querySelectorAll('.nav-link');
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  // Mobile menu toggle
+  mobileBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    // Optional: animate icon to X
+    mobileBtn.querySelector('i').classList.toggle('fa-bars');
+    mobileBtn.querySelector('i').classList.toggle('fa-xmark');
+  });
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      nav.classList.add('bg-white', 'shadow-md');
+      nav.classList.remove('bg-transparent');
+
+      // Change desktop link colors
+      links.forEach(link => {
+        link.classList.remove('text-white');
+        link.classList.add('text-gray-700');
+      });
+
+      // Change mobile burger icon to black
+      mobileBtn.classList.remove('text-white');
+      mobileBtn.classList.add('text-black');
+
+    } else {
+      nav.classList.remove('bg-white', 'shadow-md');
+      nav.classList.add('bg-transparent');
+
+      // Change desktop link colors back to white
+      links.forEach(link => {
+        link.classList.remove('text-gray-700');
+        link.classList.add('text-white');
+      });
+
+      // Change mobile burger icon back to white
+      mobileBtn.classList.remove('text-black');
+      mobileBtn.classList.add('text-white');
     }
-
-    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-        document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
-
-    // Navbar Scroll Effect
-    window.addEventListener('scroll', () => {
-        const nav = document.getElementById('navbar');
-        const links = document.querySelectorAll('.nav-link');
-
-        if (window.scrollY > 50) {
-            nav.classList.add('bg-white', 'shadow-md');
-            links.forEach(link => {
-                link.classList.remove('text-white');
-                link.classList.add('text-gray-700');
-            });
-        } else {
-            nav.classList.remove('bg-white', 'shadow-md');
-            links.forEach(link => {
-                link.classList.remove('text-gray-700');
-                link.classList.add('text-white');
-            });
-        }
-    });
-
+  });
+  
     // Gallery Filter Functionality
     const filterButtons = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
