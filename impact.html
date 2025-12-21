@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - NGO Foundation</title>
+    <title>Gallery - NGO Foundation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -19,6 +19,31 @@
         .border-teal { border-color: #008080; }
         .hover-gold:hover { background-color: #D4AF37; }
         .hover-teal:hover { background-color: #008080; }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -37,9 +62,9 @@
             <!-- Desktop Menu -->
             <div class="hidden md:flex flex-1 justify-center space-x-10">
                 <a href="index.html" class="nav-link text-white hover:text-gold transition">Home</a>
-                <a href="about.html" class="nav-link text-white font-semibold border-b-2 border-gold pb-1">About Us</a>
+                <a href="about.html" class="nav-link text-white hover:text-gold transition">About Us</a>
                 <a href="programs.html" class="nav-link text-white hover:text-gold transition">Our Programs</a>
-                <a href="impact.html" class="nav-link text-white hover:text-gold transition">Impact</a>
+                <a href="impact.html" class="nav-link text-white font-semibold border-b-2 border-gold pb-1">Impact</a>
                 <a href="gallery.html" class="nav-link text-white hover:text-gold transition">Gallery</a>
                 <a href="contact.html" class="nav-link text-white hover:text-gold transition">Contact Us</a>
             </div>
@@ -50,6 +75,7 @@
                     <i class="fas fa-heart mr-2"></i> Donate Now
                 </a>
             </div>
+
 
             <!-- Mobile Button -->
             <div class="md:hidden">
@@ -78,152 +104,81 @@
 </div>
 </nav>
 
-    <!-- Page Header -->
-    <section class="h-[400px] pt-32 pb-16 bg-gradient-to-r from-teal-600 to-teal-800 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="uppercase tracking-widest text-gold font-semibold mb-4">
-                ABOUT US
-            </p>
-    
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                Our Story of Hope
-            </h1>
-    
-            <p class="text-lg md:text-xl mb-8">
-                For nearly three decades, we have been dedicated to transforming lives and building resilient communities around the world.           
-             </p>        
-        </div>
-    </section>
+<!-- Page Header -->
+<section class="h-[400px] pt-32 pb-16 bg-gradient-to-r from-teal-600 to-teal-800 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- Mission & Vision -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-                <div class="bg-gray-200 p-8 rounded-lg text-gray-700">
-                    <div class="text-5xl text-gold mb-4">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold mb-4">Our Mission</h2>
-                    <p class="text-lg mb-4">
-                        To empower vulnerable youth, families, and elderly persons in rural communities through skills development, mentorship, and essential social support, enabling sustainable livelihoods and improved quality of life.
-                    </p>
-                </div>
-                <div class="bg-gray-200 p-8 rounded-lg text-gray-700">
-                    <div class="text-5xl text-teal mb-4">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold mb-4">Our Vision</h2>
-                    <p class="text-lg mb-4">
-                        A self-reliant, skilled, and resilient community where young people are empowered to pursue diverse career paths, vulnerable households receive adequate care, and no individual is left behind due to poverty or circumstance.
-                    </p>
-                </div>
-            </div>
+        <p class="uppercase tracking-widest text-gold font-semibold mb-4">
+            OUR IMPACT
+        </p>
 
-            <!-- Our Story -->
-            <div class="mb-16">
-                <h2 class="text-4xl font-bold text-teal mb-8 text-center">Our Story</h2>
-                <div class="max-w-4xl mx-auto">
-                    <p class="text-gray-700 text-lg mb-6">
-                        Siyatfutfuka Welfare Center is a registered non-profit organisation based in Malalane, Mpumalanga, operating within the Nkomazi Local Municipality. The organisation was established to respond to the growing social and economic challenges faced by vulnerable individuals and families in rural and previously disadvantaged communities.
-                    </p>
-                    <p class="text-gray-700 text-lg mb-6">
-                        Our work focuses on youth development, skills empowerment, support for child-headed households, and home-based care for the elderly. Many of the communities we serve face high levels of unemployment, limited access to career guidance, digital exclusion, and a lack of structured support systems. Siyatfutfuka Welfare Center exists to bridge these gaps by creating practical, community-based solutions that restore dignity, opportunity, and hope.
-                    </p>
-                    <p class="text-gray-700 text-lg">
-                        Founded by individuals with lived experience of poverty and social exclusion, the organisation is rooted in compassion, resilience, and a deep commitment to social justice. While one of our founding directors’ personal journey reflects the realities faced by many in our community, Siyatfutfuka Welfare Center represents the collective voice and aspirations of countless others who remain trapped in cycles of hardship and limited opportunity.
-                    </p>
-                </div>
-            </div>
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            Creating Change Where It Matters Most
+        </h1>
 
-<!-- Values -->
-<div>
-    <h2 class="text-4xl font-bold text-teal mb-12 text-center">Our Values</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-        <!-- Value 1 -->
-        <div class="text-center p-6 border-2 border-teal rounded-lg">
-            <div class="text-5xl text-gold mb-4">
-                <i class="fas fa-heart"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-teal mb-3">Dignity &amp; Compassion</h3>
-            <p class="text-gray-700">
-                We treat every individual with respect, empathy, and care, recognising the inherent
-                dignity and worth of all people.
-            </p>
-        </div>
-
-        <!-- Value 2 -->
-        <div class="text-center p-6 border-2 border-teal rounded-lg">
-            <div class="text-5xl text-gold mb-4">
-                <i class="fas fa-clipboard-check"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-teal mb-3">Accountability &amp; Transparency</h3>
-            <p class="text-gray-700">
-                We operate with honesty and openness, ensuring responsible stewardship of resources
-                and clear communication with our stakeholders.
-            </p>
-        </div>
-
-        <!-- Value 3 -->
-        <div class="text-center p-6 border-2 border-teal rounded-lg">
-            <div class="text-5xl text-gold mb-4">
-                <i class="fas fa-users"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-teal mb-3">Community-Led Development</h3>
-            <p class="text-gray-700">
-                We believe lasting change is achieved by working alongside communities and empowering
-                them to lead their own development.
-            </p>
-        </div>
-
-        <!-- Value 4 -->
-        <div class="text-center p-6 border-2 border-teal rounded-lg">
-            <div class="text-5xl text-gold mb-4">
-                <i class="fas fa-seedling"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-teal mb-3">Sustainability &amp; Impact</h3>
-            <p class="text-gray-700">
-                We focus on long-term solutions that create measurable, positive impact for individuals,
-                households, and communities.
-            </p>
-        </div>
-
-    </div>
-</div>
-        </div>
-    </section>
-
-    <!-- Legal & Compliance Information -->
-<section class="py-12 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-
-        <h2 class="text-2xl md:text-3xl font-bold text-teal mb-6">
-            Legal &amp; Compliance Information
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-700">
-
-            <div class="p-4 bg-white border-2 border-teal rounded-lg shadow-sm">
-                <h3 class="text-lg font-semibold text-teal mb-2">NPO Registration Number</h3>
-                <p>288-198</p>
-            </div>
-
-            <div class="p-4 bg-white border-2 border-teal rounded-lg shadow-sm">
-                <h3 class="text-lg font-semibold text-teal mb-2">NPC Registration Number</h3>
-                <p>2022/746588/08</p>
-            </div>
-
-            <div class="p-4 bg-white border-2 border-teal rounded-lg shadow-sm">
-                <h3 class="text-lg font-semibold text-teal mb-2">PBO Number</h3>
-                <p>930087456</p>
-            </div>
-
-        </div>
+        <p class="text-lg md:text-xl mb-8 max-w-3xl">
+            Our impact is rooted in people, households, and communities. Through practical support
+            and community-driven programmes, we are building foundations for lasting change.
+        </p>
 
     </div>
 </section>
 
+<!-- Our Impact -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-12">
+            <p class="text-lg text-gray-700">
+                While our organisation is still growing, our impact is measured through meaningful,
+                community-level outcomes that improve lives and strengthen resilience.
+            </p>
+        </div>
+
+        <!-- Impact Points -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+            <div class="flex items-start space-x-4">
+                <p class="text-gray-700 text-lg">
+                    Youth empowered with practical skills that improve employability and career awareness.
+                </p>
+            </div>
+
+            <div class="flex items-start space-x-4">
+                <p class="text-gray-700 text-lg">
+                    Families supported through crisis with home-based assistance and referrals.
+                </p>
+            </div>
+
+            <div class="flex items-start space-x-4">
+                <p class="text-gray-700 text-lg">
+                    Elderly individuals receiving dignified care, companionship, and community support.
+                </p>
+            </div>
+
+            <div class="flex items-start space-x-4">
+                <!--<div class="text-3xl text-gold">
+                    <i class="fas fa-route"></i>
+                </div> -->
+                <p class="text-gray-700 text-lg">
+                    Increased awareness of diverse career pathways beyond traditional options.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Closing Statement -->
+        <div class="max-w-3xl">
+            <p class="text-gray-700 text-lg leading-relaxed">
+                We believe sustainable change begins with consistent, community-level action.
+                By walking alongside individuals and families, we help create pathways to stability,
+                opportunity, and long-term impact.
+            </p>
+        </div>
+
+    </div>
+</section>
 
 <!-- Footer -->
 <footer class="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-14">
@@ -312,5 +267,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
